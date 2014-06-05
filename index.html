@@ -4,16 +4,41 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
   <style>
-  .top{ opacity: 0}
+  .top{ opacity: 0; background: url(images/logo.jpg);
+    height: 101px;
+  }
+  .top_menu {
+    position: relative;
+    left: 500px;
+    top: 20px;
+  }
+  .top_menu a{
+    color: #7c7c7c;
+    text-decoration: none ;
+  }
   .left { position: absolute; left: -500px; top: 250px; opacity: 0}
   .middle { position: absolute; left: 500px; top: 100px; opacity: 0}
-  .right { position: absolute; left: 1200px; top: 350px; opacity: 0}
-
+  .right { position: absolute; left: 1200px; top: 350px; opacity: 0;
+    background: url(new_images/index_right.jpg);
+    height: 226px;
+    width: 452px;
+    color: white;
+    font-size: 12px;
+    padding-left: 122px;
+    padding-top: 67px;
+  }
+  #right_text p { opacity: 0}
   </style>
 </head>
 <body style='position:relative' >
   <div id="top" class='top'>
-    <img src='top_menu.jpg'/>
+    <div class='top_menu'>
+      <a href='#'>首页</a>
+      <a href='#'>关于我们</a>
+      <a href='#'>服务项目</a>
+      <a href='#'>案例展示</a>
+      <a href='#'>联系我们</a>
+    </div>
   </div>
   <div id = 'left' class="left" >
     <img src='left.jpg'/>
@@ -22,7 +47,13 @@
     <img src='middle.jpg'/>
   </div>
   <div id="right" class='right' >
-    <img src='right.jpg'/>
+    <div id='right_text'>
+      <p id='text1' style='font-size: 16px; font-weight: bold'>宸立方科技提供 <p>
+      <p id='text2'>系统解决方案及服务</p>
+      <p id='text3'>网站建设</p>
+      <p id='text4'>云计算</p>
+      <p id='text5'>网站周边</p>
+    </div>
   </div>
 </body>
 </html>
@@ -30,5 +61,16 @@
   $('.top').animate({ opacity: 1.0 }, 1000)
   $('.middle').animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)
   $('.left').animate({ opacity: 1.0 , left: "+=500"}, 2000)
-  $('.right').animate({ opacity: 1.0 , left: "-=600"}, 2000)
+  $('.right').animate({ opacity: 1.0 , left: "-=600"}, 2000,
+    function(){
+      $('#text1').animate({opacity: 1.0}, 500, function(){
+        $('#text2').animate({opacity: 1.0}, 500, function(){
+          $('#text3').animate({opacity: 1.0}, 500, function(){
+            $('#text4').animate({opacity: 1.0}, 500, function(){
+              $('#text5').animate({opacity: 1.0}, 500)
+            })
+          })
+        })
+      })
+    });
 </script>
