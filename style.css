@@ -38,3 +38,85 @@
   font-size: 12px;
   line-height: 30px;
 }
+
+
+/* 案例页面的css */
+.cases_wrapper #left img{
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  opacity: 0
+}
+#balls {
+  position: absolute;
+  top: 315px;
+  left: 450px;
+  width: 2000px;
+}
+
+#balls img{
+  float: left;
+  margin-left: 200px;
+  opacity: 0
+}
+
+#text{
+  position: absolute;
+  top: 91px;
+  left: 450px;
+  color: #7c7c7c; font-size: 12px;
+  width: 630px;
+}
+#sub_title{
+  position: absolute;
+  top: 191px;
+  left: 450px;
+  color: #F87710; font-size: 14px;
+  width: 630px;
+}
+#view_button{
+  position: absolute;
+  top: 541px;
+  left: 650px;
+}
+
+/* 服务页面的CSS */
+#upper_left {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: -400px; top: 140px;
+}
+#upper_right {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: 1360px; top: 140px;
+}
+.services_wrapper .middle { position: absolute; left: 500px; top: 300px; }
+#lower_left {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: -400px; top: 600px;
+}
+#lower_right {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: 1360px; top: 600px;
+}
+.arrow{
+  z-index: 10;
+}
+
+
+/* 首页 页面 */
+.left { position: absolute; left: -500px; top: 250px; }
+.index_wrapper .middle { position: absolute; left: 500px; top: 100px; }
+.right { position: absolute; left: 1200px; top: 350px;
+  background: url(new_images/index_right.jpg);
+  height: 226px;
+  width: 452px;
+  color: white;
+  font-size: 12px;
+  padding-left: 122px;
+  padding-top: 67px;
+}
+#right_text p { opacity: 0}
