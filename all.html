@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="animation.js"></script>
+  <script type="text/javascript" src="jquery.appear.js"></script>
   <link rel="stylesheet" href="style.css"></link>
   <style>
 /* 对于 services_wrapper, 所有的top属性都要增加550px (index_wrapper 的高度) */
@@ -30,16 +31,16 @@
   position: absolute;
   left: 1360px; top: 1150px;
 }
-/* 对于 cases_wrapper, 所有的top属性都要增加550(index) + 650px(service_wrapper 的高度) */
+/* 对于 cases_wrapper, 所有的top属性都要增加 1200= 550(index) + 650px(service_wrapper 的高度) */
 .cases_wrapper #left img{
   position: absolute;
-  top: 150px;
+  top: 1350px;
   left: 50px;
   opacity: 0
 }
 .cases_wrapper #balls {
   position: absolute;
-  top: 315px;
+  top: 1515px;
   left: 450px;
   width: 2000px;
 }
@@ -51,23 +52,31 @@
 }
 .cases_wrapper #text{
   position: absolute;
-  top: 91px;
+  top: 1291px;
   left: 450px;
   color: #7c7c7c; font-size: 12px;
   width: 630px;
 }
 .cases_wrapper #sub_title{
   position: absolute;
-  top: 191px;
+  top: 1391px;
   left: 450px;
   color: #F87710; font-size: 14px;
   width: 630px;
 }
 .cases_wrapper #view_button{
   position: absolute;
-  top: 541px;
+  top: 1741px;
   left: 650px;
 }
+/*
+.cases_wrapper{
+  display:none;
+}
+.services_wrapper{
+  display:none;
+}
+*/
   </style>
 </head>
 <body  >
@@ -122,13 +131,13 @@
   </div>
   <div id='upper_left_arrow' style='position: absolute;
     left: 356px;
-    top: 752px;
+    top: 772px;
     ' class='arrow animation_element'>
     <img src='new_images/services_upper_left_arrow.jpg'/>
   </div>
   <div id='upper_right_arrow' style = 'position: absolute;
     left: 691px;
-    top: 752px;
+    top: 772px;
     ' class='arrow animation_element'>
     <img src='new_images/services_upper_right_arrow.jpg'/>
   </div>
@@ -137,7 +146,7 @@
   </div>
   <div id='lower_arrows' style='position: absolute;
     left: 329px;
-    top: 1055px;
+    top: 1075px;
     ' class='arrow animation_element'>
     <img src='new_images/services_lower_arrows.jpg'/>
   </div>
@@ -209,5 +218,17 @@
 </body>
 </html>
 <script>
-  start_index_animation()
+$(function(){
+  $('.title').each(
+    function(i,e ){ $(e).appear() }
+  )
+  $(['index', 'services', 'cases', 'about_us']).each(function(i,e){
+    console.info(e)
+    $('.'+e+'_wrapper').on('appear', function(event, $e){
+      if($('#'+ e +'_animation_is_shown').length < 1){
+        window['start_'+e+'_animation']()
+      }
+    })
+  })
+})
 </script>
