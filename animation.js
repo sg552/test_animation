@@ -1,3 +1,4 @@
+
 // 首页的动画函数
 start_index_animation = function(){
   $('.index_wrapper .middle').animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)

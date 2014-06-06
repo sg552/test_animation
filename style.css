@@ -24,6 +24,8 @@
   top: 200px;
   width: 200px;
   z-index: 1000;
+  font-weight: bold;
+  font-size: 20px;
 }
 #right_menu a{
   color: rgb(94, 94, 94);
@@ -54,6 +56,9 @@
 
 
 /* 案例页面的css */
+.cases_wrapper{
+  height: 550px;
+}
 .cases_wrapper #left img{
   position: absolute;
   top: 150px;
@@ -96,7 +101,6 @@
 /* 服务页面的CSS */
 .services_wrapper{
   height: 650px;
-  border: 1px solid red;
 }
 #upper_left {
   width: 325px; height: 200px;
@@ -127,7 +131,6 @@
 /* 首页 页面 */
 .index_wrapper{
   height: 550px;
-  border: 1px solid red;
 }
 .left { position: absolute; left: -500px; top: 250px; }
 .index_wrapper .middle { position: absolute; left: 500px; top: 100px; }
