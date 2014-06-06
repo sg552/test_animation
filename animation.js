@@ -1,25 +1,26 @@
 // 首页的动画函数
 start_index_animation = function(){
-  $('.middle').animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)
-  $('.left').animate({ opacity: 1.0 , left: "+=500"}, 2000)
-  $('.right').animate({ opacity: 1.0 , left: "-=600"}, 2000,
-    function(){
-      $('#text1').animate({opacity: 1.0}, 500, function(){
-        $('#text2').animate({opacity: 1.0}, 500, function(){
-          $('#text3').animate({opacity: 1.0}, 500, function(){
-            $('#text4').animate({opacity: 1.0}, 500, function(){
-              $('#text5').animate({opacity: 1.0}, 500)
-            })
+  $('.index_wrapper .middle').animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)
+  $('.index_wrapper .left').animate({ opacity: 1.0 , left: "+=500"}, 2000)
+  $('.index_wrapper .right').animate({ opacity: 1.0 , left: "-=600"}, 2000, function(){
+    $('#text1').animate({opacity: 1.0}, 500, function(){
+      $('#text2').animate({opacity: 1.0}, 500, function(){
+        $('#text3').animate({opacity: 1.0}, 500, function(){
+          $('#text4').animate({opacity: 1.0}, 500, function(){
+            $('#text5').animate({opacity: 1.0}, 500)
           })
         })
       })
-    });
+    })
+  });
+  $('body').append('<div id="index_animation_is_shown"></div>')
 }
 
 // 联系我们的动画函数
 start_about_us_animation = function(){
   $('#about_us_left').animate({ opacity: 1.0, left: '+=500' }, 1000)
   $('#about_us_right').animate({ opacity: 1.0, left: '-=300' }, 1000)
+  $('body').append('<div id="about_us_animation_is_shown"></div>')
 }
 
 
@@ -37,6 +38,7 @@ start_services_animation = function(){
     })
   })
   $('.middle').animate({ opacity: 1.0 }, 1000)
+  $('body').append('<div id="services_animation_is_shown"></div>')
 }
 
 
@@ -82,6 +84,7 @@ start_cases_animation = function() {
       show_balls()
     })
   })
+  $('body').append('<div id="cases_animation_is_shown"></div>')
 }
 
 // 每次页面加载完毕，都会自动运行这些方法(显示顶部菜单，和当前页面的标题）

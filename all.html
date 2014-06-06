@@ -6,41 +6,97 @@
   <script type="text/javascript" src="animation.js"></script>
   <link rel="stylesheet" href="style.css"></link>
   <style>
-  .left { position: absolute; left: -500px; top: 250px; }
-  .middle { position: absolute; left: 500px; top: 100px; }
-  .right { position: absolute; left: 1200px; top: 350px;
-    background: url(new_images/index_right.jpg);
-    height: 226px;
-    width: 452px;
-    color: white;
-    font-size: 12px;
-    padding-left: 122px;
-    padding-top: 67px;
-  }
-  #right_text p { opacity: 0}
+/* 对于 services_wrapper, 所有的top属性都要增加550px (index_wrapper 的高度) */
+.services_wrapper #upper_left {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: -400px; top: 710px;
+}
+.services_wrapper #upper_right {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: 1360px; top: 710px;
+}
+.services_wrapper .middle {
+  position: absolute; left: 500px; top: 870px;
+}
+.services_wrapper #lower_left {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: -400px; top: 1150px;
+}
+.services_wrapper #lower_right {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: 1360px; top: 1150px;
+}
+/* 对于 cases_wrapper, 所有的top属性都要增加550(index) + 650px(service_wrapper 的高度) */
+.cases_wrapper #left img{
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  opacity: 0
+}
+.cases_wrapper #balls {
+  position: absolute;
+  top: 315px;
+  left: 450px;
+  width: 2000px;
+}
+
+.cases_wrapper #balls img{
+  float: left;
+  margin-left: 200px;
+  opacity: 0
+}
+.cases_wrapper #text{
+  position: absolute;
+  top: 91px;
+  left: 450px;
+  color: #7c7c7c; font-size: 12px;
+  width: 630px;
+}
+.cases_wrapper #sub_title{
+  position: absolute;
+  top: 191px;
+  left: 450px;
+  color: #F87710; font-size: 14px;
+  width: 630px;
+}
+.cases_wrapper #view_button{
+  position: absolute;
+  top: 541px;
+  left: 650px;
+}
   </style>
 </head>
-<body style='position:relative' >
-<div class='index_wrapper'>
-  <div id="top" class='top animation_element'>
-    <div class='top_menu'>
-      <a href='index.html'>首页</a>
-      <a href='index.html'>关于我们</a>
-      <a href='services.html'>服务项目</a>
-      <a href='cases.html'>案例展示</a>
-      <a href='about_us.html'>联系我们</a>
-    </div>
+<body  >
+<div id='right_menu'>
+  <a href='index.html' id='index_link'>关于我们</a> <br/>
+  <a href='services.html' id='services_link'>服务项目</a> <br/>
+  <a href='cases.html' id='cases_link'>案例展示</a> <br/>
+  <a href='about_us.html' id='about_us_link'>联系我们</a>
+</div>
+<div id="top" class='top animation_element'>
+  <div class='top_menu'>
+    <a href='index.html'>首页</a>
+    <a href='index.html'>关于我们</a>
+    <a href='services.html'>服务项目</a>
+    <a href='cases.html'>案例展示</a>
+    <a href='about_us.html'>联系我们</a>
   </div>
+</div>
+<div class='index_wrapper' style='position:relative'>
   <div class='title animation_element'>
     关于我们
   </div>
-  <div id='left' class="left animation_element" >
+  <div id='left' class="left animation_element" style='top:150px'>
     <img src='left.jpg'/>
   </div>
-  <div id="middle" class='middle animation_element' >
+  <div id="middle" class='middle animation_element' style='top:0px'>
     <img src='middle.jpg'/>
   </div>
-  <div id="right" class='right animation_element' >
+  <div id="right" class='right animation_element' style='top:230px' >
     <div id='right_text'>
       <p id='text1' style='font-size: 16px; font-weight: bold'>宸立方科技提供 <p>
       <p id='text2'>系统解决方案及服务</p>
@@ -52,15 +108,6 @@
 </div><!-- index wrapper  -->
 
 <div class='services_wrapper'>
-  <div id="top" class='top'>
-    <div class='top_menu'>
-      <a href='index.html'>首页</a>
-      <a href='index.html'>关于我们</a>
-      <a href='services.html'>服务项目</a>
-      <a href='cases.html'>案例展示</a>
-      <a href='about_us.html'>联系我们</a>
-    </div>
-  </div>
   <div class='title animation_element'>
     服务项目
   </div>
@@ -75,13 +122,13 @@
   </div>
   <div id='upper_left_arrow' style='position: absolute;
     left: 356px;
-    top: 202px;
+    top: 752px;
     ' class='arrow animation_element'>
     <img src='new_images/services_upper_left_arrow.jpg'/>
   </div>
   <div id='upper_right_arrow' style = 'position: absolute;
     left: 691px;
-    top: 202px;
+    top: 752px;
     ' class='arrow animation_element'>
     <img src='new_images/services_upper_right_arrow.jpg'/>
   </div>
@@ -90,7 +137,7 @@
   </div>
   <div id='lower_arrows' style='position: absolute;
     left: 329px;
-    top: 505px;
+    top: 1055px;
     ' class='arrow animation_element'>
     <img src='new_images/services_lower_arrows.jpg'/>
   </div>
@@ -105,15 +152,6 @@
 </div><!-- services_wrapper -->
 
 <div class='cases_wrapper'>
-  <div id="top" class='top'>
-    <div class='top_menu'>
-      <a href='index.html'>首页</a>
-      <a href='index.html'>关于我们</a>
-      <a href='services.html'>服务项目</a>
-      <a href='cases.html'>案例展示</a>
-      <a href='about_us.html'>联系我们</a>
-    </div>
-  </div>
   <div class='title animation_element'>
     案例展示
   </div>
@@ -144,15 +182,6 @@
   <img src='new_images/cases_view_button.jpg' id='view_button' class='animation_element'/>
 </div><!-- cases_wrapper -->
 <div class='about_us_wrapper'>
-  <div id="top" class='top animation_element'>
-    <div class='top_menu'>
-      <a href='index.html'>首页</a>
-      <a href='index.html'>关于我们</a>
-      <a href='services.html'>服务项目</a>
-      <a href='cases.html'>案例展示</a>
-      <a href='about_us.html'>联系我们</a>
-    </div>
-  </div>
   <div class='title animation_element'>
     联系我们
   </div>
