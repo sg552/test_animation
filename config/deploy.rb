@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'capistrano-rbenv'
 load 'deploy/assets'
-ssh_options[:port] = 22022
+ssh_options[:port] = 22
 set :rake, "bundle exec rake"
 
 set :copy_local_tar, "/usr/bin/gnutar" if RUBY_PLATFORM.match(/darwin/)
