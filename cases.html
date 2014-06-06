@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="animation.js"></script>
   <style>
   .top{ opacity: 0; background: url(images/logo.jpg);
     height: 101px;
@@ -98,41 +99,5 @@
 </body>
 </html>
 <script>
-  $('.top').animate({ opacity: 1.0 }, 1000)
-  show_trees = function(){
-    $('#tree1').animate({ opacity: 1.0, left: "+=550"}, 1000, function(){
-      $('#tree2').animate({ opacity: 1.0}, 1000, function(){
-        $('#tree3').animate({ opacity: 1.0}, 1000, function(){
-          $('#tree4').animate({ opacity: 1.0}, 1000, function(){
-            $('#tree5').animate({ opacity: 1.0}, 1000)
-          })
-        })
-      })
-    })
-  }
-  show_balls = function(){
-    $('#ball_1').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-      $('#ball_plus_1').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-        $('#ball_2').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-          $('#ball_plus_2').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-            $('#ball_3').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-              $('#ball_plus_3').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-                $('#ball_4').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-                  $('#view_button').animate({opacity: 1.0, top: '-=50'}, 1500)
-                  $('#balls').animate({ width: 700}, 100)
-                })
-              })
-            })
-          })
-        })
-      })
-    })
-  }
-
-  $('#text').animate({opacity: 1.0, top: "+=50"}, 1500, function(){
-    show_trees()
-    $('#title').animate({opacity: 1.0, top: "+=50"}, 1500, function(){
-      show_balls()
-    })
-  })
+  start_cases_animation()
 </script>

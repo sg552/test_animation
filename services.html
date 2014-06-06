@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="animation.js"></script>
   <style>
   .top{ opacity: 0; background: url(images/logo.jpg);
     height: 101px;
@@ -96,17 +97,5 @@
 </body>
 </html>
 <script>
-  $('.top').animate({ opacity: 1.0 }, 1000)
-  $('#upper_left').animate({ opacity: 1.0, left: "+=400" }, 540, function(){
-    $('#upper_left_arrow').animate({ opacity: 1.0})
-    $('#upper_right').animate({ opacity: 1.0, left: "-=500" }, 540, function(){
-      $('#upper_right_arrow').animate({ opacity: 1.0})
-      $('#lower_left').animate({ opacity: 1.0, left: "+=420" }, 540, function(){
-        $('#lower_right').animate({ opacity: 1.0, left: "-=470" }, 540, function(){
-          $('#lower_arrows').animate({ opacity: 1.0})
-        })
-      })
-    })
-  })
-  $('.middle').animate({ opacity: 1.0 }, 1000)
+  start_services_animation()
 </script>

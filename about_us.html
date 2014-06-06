@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="animation.js"></script>
   <style>
   .top{ opacity: 0; background: url(images/logo.jpg);
     height: 101px;
@@ -51,7 +52,7 @@
       <a href='about_us.html'>联系我们</a>
     </div>
   </div>
-  <div id='about_us_title' class='title animation_element'>
+  <div class='title animation_element'>
     联系我们
   </div>
   <div id='about_us_left' class='animation_element'>
@@ -75,8 +76,5 @@
 </body>
 </html>
 <script>
-  $('.top').animate({ opacity: 1.0 }, 1000)
-  $('.title').animate({ opacity: 1.0, 'margin-top': '+=50' }, 1000)
-  $('#about_us_left').animate({ opacity: 1.0, left: '+=500' }, 1000)
-  $('#about_us_right').animate({ opacity: 1.0, left: '-=300' }, 1000)
+start_about_us_animation()
 </script>

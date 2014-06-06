@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="animation.js"></script>
   <style>
   .top{ opacity: 0; background: url(images/logo.jpg);
     height: 101px;
@@ -59,19 +60,5 @@
 </body>
 </html>
 <script>
-  $('.top').animate({ opacity: 1.0 }, 1000)
-  $('.middle').animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)
-  $('.left').animate({ opacity: 1.0 , left: "+=500"}, 2000)
-  $('.right').animate({ opacity: 1.0 , left: "-=600"}, 2000,
-    function(){
-      $('#text1').animate({opacity: 1.0}, 500, function(){
-        $('#text2').animate({opacity: 1.0}, 500, function(){
-          $('#text3').animate({opacity: 1.0}, 500, function(){
-            $('#text4').animate({opacity: 1.0}, 500, function(){
-              $('#text5').animate({opacity: 1.0}, 500)
-            })
-          })
-        })
-      })
-    });
+  start_index_animation()
 </script>
