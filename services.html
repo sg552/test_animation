@@ -4,45 +4,31 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="animation.js"></script>
+  <link rel="stylesheet" href="style.css"></link>
   <style>
-  .top{ opacity: 0; background: url(images/logo.jpg);
-    height: 101px;
-  }
-  .top_menu {
-    position: relative;
-    left: 500px;
-    top: 20px;
-    width: 400px;
-  }
-  .top_menu a{
-    color: #7c7c7c;
-    text-decoration: none ;
-  }
-
   #upper_left {
     width: 325px; height: 200px;
     position: absolute;
-    left: -400px; top: 100px; opacity: 0
+    left: -400px; top: 140px;
   }
   #upper_right {
     width: 325px; height: 200px;
     position: absolute;
-    left: 1360px; top: 100px; opacity: 0
+    left: 1360px; top: 140px;
   }
-  .middle { position: absolute; left: 500px; top: 300px; opacity: 0}
+  .middle { position: absolute; left: 500px; top: 300px; }
   #lower_left {
     width: 325px; height: 200px;
     position: absolute;
-    left: -400px; top: 560px; opacity: 0
+    left: -400px; top: 600px;
   }
   #lower_right {
     width: 325px; height: 200px;
     position: absolute;
-    left: 1360px; top: 560px; opacity: 0
+    left: 1360px; top: 600px;
   }
   .arrow{
     z-index: 10;
-    opacity: 0
   }
   </style>
 </head>
@@ -56,41 +42,44 @@
       <a href='about_us.html'>联系我们</a>
     </div>
   </div>
-  <div id ='upper_left'>
+  <div class='title animation_element'>
+    服务项目
+  </div>
+  <div id ='upper_left' class='animation_element'>
     <img src='new_images/services_upper_left_1.jpg'/>
     <img src='new_images/services_upper_left_2.jpg'/>
     <img src='new_images/services_upper_left_3.jpg'/>
   </div>
-  <div id ='upper_right'>
+  <div id ='upper_right' class='animation_element'>
     <img src='new_images/services_upper_right_1.jpg'/>
     <img src='new_images/services_upper_right_2.jpg'/>
   </div>
   <div id='upper_left_arrow' style='position: absolute;
     left: 356px;
     top: 202px;
-    ' class='arrow'>
+    ' class='arrow animation_element'>
     <img src='new_images/services_upper_left_arrow.jpg'/>
   </div>
   <div id='upper_right_arrow' style = 'position: absolute;
     left: 691px;
     top: 202px;
-    ' class='arrow'>
+    ' class='arrow animation_element'>
     <img src='new_images/services_upper_right_arrow.jpg'/>
   </div>
-  <div id='middle' class="middle" >
+  <div id='middle' class="middle animation_element" >
     <img src='new_images/services_middle.jpg'/>
   </div>
   <div id='lower_arrows' style='position: absolute;
     left: 329px;
     top: 505px;
-    ' class='arrow'>
+    ' class='arrow animation_element'>
     <img src='new_images/services_lower_arrows.jpg'/>
   </div>
-  <div id ='lower_left'>
+  <div id ='lower_left' class='animation_element'>
     <img src='new_images/services_lower_left_1.jpg'/>
     <img src='new_images/services_lower_left_2.jpg'/>
   </div>
-  <div id ='lower_right'>
+  <div id ='lower_right' class='animation_element'>
     <img src='new_images/services_lower_right_1.jpg'/>
     <img src='new_images/services_lower_right_2.jpg'/>
   </div>

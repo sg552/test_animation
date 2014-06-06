@@ -1,0 +1,40 @@
+/* 每个可以有动画效果的元素*/
+.animation_element{
+  opacity: 0
+}
+/* 这里是公共模块: 顶部菜单 */
+.top{
+  background: url(images/logo.jpg);
+  height: 101px;
+}
+.top_menu {
+  position: relative;
+  left: 500px;
+  top: 20px;
+  width: 500px;
+}
+.top_menu a{
+  color: #7c7c7c;
+  text-decoration: none ;
+  margin-left: 20px;
+}
+
+/* 每个页面的标题 */
+.title{
+  color:#F87710; font-size: 35px; font-weight:bold; margin-left: 58px;
+  margin-top: -50px;
+}
+
+#about_us_left {
+  width: 325px; height: 200px;
+  position: absolute;
+  left: -400px; top: 200px;
+}
+#about_us_right{
+  width: 425px; height: 200px;
+  position: absolute;
+  left: 1000px; top: 200px;
+  color: rgb(124, 124, 124);
+  font-size: 12px;
+  line-height: 30px;
+}

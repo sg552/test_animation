@@ -1,5 +1,6 @@
 // 首页的动画函数
 start_index_animation = function(){
+  $('.title').animate({ opacity: 1.0, 'margin-top': '+=50' }, 1000)
   $('.top').animate({ opacity: 1.0 }, 1000)
   $('.middle').animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)
   $('.left').animate({ opacity: 1.0 , left: "+=500"}, 2000)
@@ -28,6 +29,7 @@ start_about_us_animation = function(){
 
 //服务的动画函数
 start_services_animation = function(){
+  $('.title').animate({ opacity: 1.0, 'margin-top': '+=50' }, 1000)
   $('.top').animate({ opacity: 1.0 }, 1000)
   $('#upper_left').animate({ opacity: 1.0, left: "+=400" }, 540, function(){
     $('#upper_left_arrow').animate({ opacity: 1.0})
@@ -81,9 +83,10 @@ show_balls = function(){
 //案例展示的动画函数
 start_cases_animation = function() {
   $('.top').animate({ opacity: 1.0 }, 1000)
+  $('.title').animate({ opacity: 1.0, 'margin-top': '+=50' }, 1000)
   $('#text').animate({opacity: 1.0, top: "+=50"}, 1500, function(){
     show_trees()
-    $('#title').animate({opacity: 1.0, top: "+=50"}, 1500, function(){
+    $('#sub_title').animate({opacity: 1.0, top: "+=50"}, 1500, function(){
       show_balls()
     })
   })

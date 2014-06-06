@@ -4,20 +4,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="animation.js"></script>
+  <link rel="stylesheet" href="style.css"></link>
   <style>
-  .top{ opacity: 0; background: url(images/logo.jpg);
-    height: 101px;
-  }
-  .top_menu {
-    position: relative;
-    left: 500px;
-    top: 20px;
-    width: 400px;
-  }
-  .top_menu a{
-    color: #7c7c7c;
-    text-decoration: none ;
-  }
   #left img{
     position: absolute;
     top: 150px;
@@ -43,21 +31,18 @@
     left: 450px;
     color: #7c7c7c; font-size: 12px;
     width: 630px;
-    opacity: 0
   }
-  #title{
+  #sub_title{
     position: absolute;
     top: 191px;
     left: 450px;
     color: #F87710; font-size: 14px;
     width: 630px;
-    opacity: 0
   }
   #view_button{
     position: absolute;
     top: 541px;
     left: 650px;
-    opacity: 0
   }
   </style>
 </head>
@@ -71,6 +56,9 @@
       <a href='about_us.html'>联系我们</a>
     </div>
   </div>
+  <div class='title animation_element'>
+    案例展示
+  </div>
   <div id='left'>
     <img src='new_images/tree_1.jpg' id='tree1' style='left: -500px; opacity: 1'/>
     <img src='new_images/tree_2.jpg' id='tree2'/>
@@ -78,10 +66,10 @@
     <img src='new_images/tree_4.jpg' id='tree4'/>
     <img src='new_images/tree_5.jpg' id='tree5'/>
   </div>
-  <div id='text' >
+  <div id='text' class='animation_element'>
     <p>宸立方经过9年的WEB体系研究，具备成熟的网站整体解决方案，360度网络品牌策略，分析互联网现状，定位互联网规划目标，为不同客创造适合自己的互联网形象</p>
   </div>
-  <div id='title'>
+  <div id='sub_title' class='animation_element'>
     我们服务的网站类型有：
   </div>
 
@@ -95,7 +83,7 @@
     <img src='new_images/cases_ball_4.jpg' id='ball_4'/>
   </div>
 
-  <img src='new_images/cases_view_button.jpg' id='view_button'/>
+  <img src='new_images/cases_view_button.jpg' id='view_button' class='animation_element'/>
 </body>
 </html>
 <script>
