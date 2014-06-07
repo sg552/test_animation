@@ -19,7 +19,7 @@ set :deploy_via, :copy
 #    password = 'Q7sKxQhifoM8'
 #end
 server = 'siwei.me'
-password = 'sss333'
+password = ''
 puts "== password for #{server} is: #{password}"
 
 role :web, server
