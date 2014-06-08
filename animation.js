@@ -90,11 +90,21 @@ start_cases_animation = function() {
 
 // 开发流程的动画函数
 start_workflow_animation = function(){
-  start_single_workflow_animation('workflow_1')
+  start_single_workflow_animation('workflow_1', function(){
+    start_single_workflow_animation('workflow_2', function(){
+      start_single_workflow_animation('workflow_3', function(){
+        start_single_workflow_animation('workflow_4', function(){
+          start_single_workflow_animation('workflow_5', function(){
+            start_single_workflow_animation('workflow_6')
+          })
+        })
+      })
+    })
+  })
 }
 
 // selector: 'workflow_1', 'workflow_2'
-start_single_workflow_animation = function(id_selector){
+start_single_workflow_animation = function(id_selector , after_call_back){
   if($('#' + id_selector + '_animation_is_shown').length >= 1 ) {
     return 'animation has been shown'
   }
@@ -108,8 +118,8 @@ start_single_workflow_animation = function(id_selector){
             .css('margin-top', '-=100px')
             .animate({opacity: 1.0, 'margin-top': '+=100'}, 1000, function(){
               $('#' + id_selector).children('img').last()
-                .css('margin-left', '+=200px')
-                .animate({ opacity: 1.0, 'margin-left': '-=200' }, 1000)
+                .css('margin-left', '+=50px')
+                .animate({ opacity: 1.0, 'margin-left': '-=50' }, 1000, after_call_back )
             })
       })
     })

@@ -179,6 +179,7 @@
   height: 332px;
   width: 98%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .workflow_wrapper .description_area{
   float:left; width: 300px;
