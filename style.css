@@ -37,6 +37,18 @@
   line-height: 30px;
 }
 
+/* footer */
+.footer {
+  background-color: #f87711; height: 100px; width: 100%;
+  color: white; margin-top: 50px; clear:both; font-size: 14px; line-height: 20px;
+}
+.footer .left_footer{
+  float: left; height: 80px; width: 440px; margin: 23px 0 0 50px
+}
+.footer .right_footer{
+  float: right; height: 80px; width: 380px; margin: 23px 50px 0 0
+}
+
 /* 每个页面的标题 */
 .title{
   color:#F87710; font-size: 35px; font-weight:bold; margin-left: 58px;
@@ -168,18 +180,24 @@
   width: 98%;
   margin: 0 auto;
 }
+.workflow_wrapper .description_area{
+  float:left; width: 300px;
+}
 .workflow_title{
   color: #F87710;
   font-size: 26px;
   line-height: 30px;
   vertical-align: middle;
   width: 300px;
-  margin: 30px 0 30px 200px;
+  margin: 30px 0 30px 20px;
 }
 .workflow_wrapper .description{
-  width: 300px;
-  margin-left: 200px;
+  width: 320px;
+  margin-left: 20px;
   color: #7c7c7c;
   font-size: 18px;
   line-height: 30px;
+}
+.workflow_wrapper .big_image{
+  width: 320px;
 }
