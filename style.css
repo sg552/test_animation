@@ -202,3 +202,10 @@
 .workflow_wrapper .big_image{
   width: 320px;
 }
+
+
+/* 案例详情页 */
+.case_description a{
+  text-decoration: none ;
+  color: #F87710;
+}
