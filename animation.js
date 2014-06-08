@@ -88,6 +88,34 @@ start_cases_animation = function() {
   $('body').append('<div id="cases_animation_is_shown"></div>')
 }
 
+// 开发流程的动画函数
+start_workflow_animation = function(){
+  start_single_workflow_animation('workflow_1')
+}
+
+// selector: 'workflow_1', 'workflow_2'
+start_single_workflow_animation = function(id_selector){
+  if($('#' + id_selector + '_animation_is_shown').length >= 1 ) {
+    return 'animation has been shown'
+  }
+  $('#' + id_selector).children('img').first()
+    .css('margin-left', '-=100px')
+    .animate({ opacity: 1.0, 'margin-left': '+=100' }, 1000, function(){
+      $('#' + id_selector + ' .workflow_title')
+        .css('margin-top', '-=100px')
+        .animate({opacity: 1.0, 'margin-top': '+=100'}, 1000, function(){
+          $('#' + id_selector + ' .description')
+            .css('margin-top', '-=100px')
+            .animate({opacity: 1.0, 'margin-top': '+=100'}, 1000, function(){
+              $('#' + id_selector).children('img').last()
+                .css('margin-left', '+=200px')
+                .animate({ opacity: 1.0, 'margin-left': '-=200' }, 1000)
+            })
+      })
+    })
+  $('body').append('<div id="'+ id_selector + '_animation_is_shown"></div>')
+}
+
 // 每次页面加载完毕，都会自动运行这些方法(显示顶部菜单，和当前页面的标题）
 $(function(){
   $('.top').animate({ opacity: 1.0 }, 1000)
