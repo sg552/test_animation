@@ -33,6 +33,7 @@ cancel_index_animation = function(){
   $([1,2,3,4,5]).each(function(i, e){
     $('#text' + i).css({opacity: 0})
   })
+  $('#text5').css({opacity: 0})
   $("#index_animation_is_shown").remove()
 }
 

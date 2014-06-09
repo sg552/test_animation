@@ -61,6 +61,12 @@
   position: absolute;
   left: -400px; top: 200px;
 }
+
+#about_us_left form input , #about_us_left form textarea{
+  border: 1px solid #dbdbdb; height: 30px; width: 350px;
+  background-color: #f4f0ef; margin: 10px;
+}
+
 #about_us_right{
   width: 425px; height: 200px;
   position: absolute;
