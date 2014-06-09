@@ -240,7 +240,7 @@
   margin: 5px;
   overflow: hidden;
   /* 这个值设置的不正确的话，会影响动画效果*/
-  opacity: 0.1;
+  opacity: 0.5;
   /*display: none;*/
 }
 .single_case img{

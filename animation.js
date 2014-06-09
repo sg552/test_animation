@@ -126,6 +126,21 @@ start_single_workflow_animation = function(id_selector , after_call_back){
   $('body').append('<div id="'+ id_selector + '_animation_is_shown"></div>')
 }
 
+/* 案例详情页的动画效果*/
+start_case_details_animation = function(){
+  $('.monitor')
+    .css('margin-left', '-=100px')
+    .animate({ opacity: 1.0, 'margin-left': '+=100' }, 1000, function(){
+      $('.case_description')
+        .css('margin-top', '+=100px')
+        .animate({ opacity: 1.0, 'margin-top': '-=100' }, 1000, function(){
+          $('#screen_shot')
+            .css('margin-right', '+=100px')
+            .animate({ opacity: 1.0, 'margin-right': '-=100' }, 1000, function(){ })
+        })
+    })
+}
+
 // 每次页面加载完毕，都会自动运行这些方法(显示顶部菜单，和当前页面的标题）
 $(function(){
   $('.top').animate({ opacity: 1.0 }, 1000)

@@ -31,10 +31,6 @@
       <div> 电子商务型</div>
       <div> 其他类型</div>
     </div><!-- filter -->
-    <!-- 注意： 这里的案例展示，使用了 float: left的CSS 样式。  有一点需要特别注意：
-    在 遍历显示 案例的时候，要留意它的图片高度。 切记是从左往右高度依次递增。
-    否则会显示不全面
-    -->
     <div class='list'>
       <div class='single_case'>
         <img src='new_images/case_logo_5.jpg'/>
@@ -168,17 +164,12 @@
 <script>
   var container = document.querySelector('.list');
   var msnry = new Masonry( container, {
-    // options
-//    columnWidth: 200,
     itemSelector: '.single_case',
-    visibleStyle: { opacity: 0.5, transform: 'scale(1)'},
-    hiddenStyle: { display: '', opacity: 1, transform: 'scale(0.001)' },
-    transitionDuration: '2.0s'
-
-
+    visibleStyle: { opacity: 1, transform: 'scale(2)'},
+    transitionDuration: '3.0s'
   });
   imagesLoaded(container, function(){
     msnry.layout();
   });
-  $('.single_case').animate({opacity: 1.0}, 300, function(){ })
+  $('.single_case').animate({opacity: 1.0}, 500, function(){ })
 </script>
