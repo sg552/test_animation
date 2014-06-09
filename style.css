@@ -209,3 +209,54 @@
   text-decoration: none ;
   color: #F87710;
 }
+
+/* 案例展示页 */
+.cases_list .filter {
+  height: 50px;
+  margin: 15px 0 30px 0;
+}
+.cases_list .filter div{
+  height: 20px;
+  width: 100px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+  float: left;
+  color: #1c1c1c;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.cases_list .filter .active{
+  color: #f67710;
+  background-color: #f2f2f2;
+}
+.single_case {
+  width: 272px;
+  background-color: #ffffff;
+  padding: 0 0 10px 0;
+  float: left;
+  margin: 5px;
+  overflow: hidden;
+  /* 这个值设置的不正确的话，会影响动画效果*/
+  opacity: 0.1;
+  /*display: none;*/
+}
+.single_case img{
+  /*min-width: 272px;*/
+}
+.single_case .category{
+  margin: 10px; color: #737373;
+}
+.single_case_title {
+  margin: 10px; font-size: 20px;
+}
+.single_case_title a{
+  color: #393939;
+  text-decoration: none ;
+}
+.single_case_title a:hover{
+  color: #f67710;
+  text-decoration: none ;
+}
