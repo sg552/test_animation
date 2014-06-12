@@ -1,3 +1,8 @@
+is_element_in_upper_half_area_in_current_window = function(element){
+  element_relative_position_in_current_window = element.offset().top - $(window).scrollTop()
+  return (element_relative_position_in_current_window > 0 ) &&
+    element_relative_position_in_current_window < $(window).height()/2
+}
 
 // 首页的动画函数
 start_index_animation = function(){
@@ -233,8 +238,28 @@ $(function(){
 })
 
 
+// 这里是动态的方法声明和调用。 声明以下四个方法：
+// restart_index_animation()
+// restart_services_animation()
+// restart_cases_animation()
+// restart_about_us_animation()
+$(['index', 'services', 'cases', 'about_us']).each(function(i,e){
+  window['restart_' + e + '_animation'] = function() {
+    high_light_link_on_right_menu( e )
+    if($('#' + e + '_animation_is_showing').length > 0 ||
+        $('#' + e + '_animation_is_shown').length < 1) {
+      return;
+    }
+    // 动态的方法调用，例如： cancel_services_animation()
+    window['cancel_'+e+'_animation']()
+    // 动态的方法调用，例如： start_services_animation()
+    window['start_' + e + '_animation']()
+  }
+})
 
+/*
 restart_services_animation = function(){
+  high_light_link_on_right_menu('services')
   if($('#services_animation_is_showing').length > 0 || $('#services_animation_is_shown').length < 1) {
     return;
   }
@@ -243,6 +268,7 @@ restart_services_animation = function(){
 }
 
 restart_cases_animation = function(){
+  high_light_link_on_right_menu('cases')
   if($('#cases_animation_is_showing').length > 0 || $('#cases_animation_is_shown').length < 1) {
     return;
   }
@@ -251,6 +277,7 @@ restart_cases_animation = function(){
 }
 
 restart_about_us_animation = function(){
+  high_light_link_on_right_menu('about_us')
   if($('#about_us_animation_is_showing').length > 0 || $('#about_us_animation_is_shown').length < 1) {
     return;
   }
@@ -258,10 +285,25 @@ restart_about_us_animation = function(){
   start_about_us_animation()
 }
 restart_index_animation = function(){
+  high_light_link_on_right_menu('index')
   if($('#index_animation_is_showing').length > 0 || $('#index_animation_is_shown').length < 1) {
     return;
   }
-
   cancel_index_animation()
   start_index_animation()
+}
+*/
+
+
+// 用来判断 IE6 。 如果是IE6的话，就把右侧的浮动栏给隐藏掉。
+hide_right_menu_if_in_ie_6 = function(){
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE ");
+  version = null;
+  if(msie > 0) {
+    version = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)))
+    if(version == 6){
+      $('#right_menu').hide()
+    }
+  }
 }

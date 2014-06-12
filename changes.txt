@@ -1,0 +1,64 @@
+diff --git a/all.html b/all.html
+index c224846..ab45b2d 100644
+--- a/all.html
++++ b/all.html
+@@ -253,7 +253,9 @@ $(function(){
+       if($(window).scrollTop() < 100){
+         high_light_link_on_right_menu('index')
+       }else{
+-        high_light_link_on_right_menu(e)
++        if(is_element_in_upper_half_area_in_current_window($e)){
++          high_light_link_on_right_menu(e)
++        }
+       }
+       // 只有没有运行过
+       if($('#'+ e +'_animation_is_shown').length < 1 &&
+diff --git a/animation.js b/animation.js
+index 65d6339..5d2f3d1 100644
+--- a/animation.js
++++ b/animation.js
+@@ -1,4 +1,8 @@
+-
++is_element_in_upper_half_area_in_current_window = function(element){
++  element_relative_position_in_current_window = element.offset().top - $(window).scrollTop()
++  return (element_relative_position_in_current_window > 0 ) &&
++    element_relative_position_in_current_window < $(window).height()/2
++}
+ // 首页的动画函数
+ start_index_animation = function(){
+   if($('#index_animation_is_showing').length > 0) {
+@@ -235,6 +239,7 @@ $(function(){
+
+
+ restart_services_animation = function(){
++  high_light_link_on_right_menu('services')
+   if($('#services_animation_is_showing').length > 0 || $('#services_animation_is_shown').length < 1) {
+     return;
+   }
+@@ -243,6 +248,7 @@ restart_services_animation = function(){
+ }
+
+ restart_cases_animation = function(){
++  high_light_link_on_right_menu('cases')
+   if($('#cases_animation_is_showing').length > 0 || $('#cases_animation_is_shown').length < 1) {
+     return;
+   }
+@@ -251,6 +257,7 @@ restart_cases_animation = function(){
+ }
+
+ restart_about_us_animation = function(){
++  high_light_link_on_right_menu('about_us')
+   if($('#about_us_animation_is_showing').length > 0 || $('#about_us_animation_is_shown').length < 1) {
+     return;
+   }
+@@ -258,6 +265,7 @@ restart_about_us_animation = function(){
+   start_about_us_animation()
+ }
+ restart_index_animation = function(){
++  high_light_link_on_right_menu('index')
+   if($('#index_animation_is_showing').length > 0 || $('#index_animation_is_shown').length < 1) {
+     return;
+   }
+diff --git a/config/deploy.rb.example b/config/deploy.rb.example
+deleted file mode 100644
+index a7d4e70..0000000

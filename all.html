@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOC​TYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="style.css"></link>
   <style>
 /* 对于 services_wrapper, 所有的top属性都要增加550px (index_wrapper 的高度) */
+/*
 .services_wrapper #upper_left {
   top: 710px;
 }
@@ -23,7 +25,9 @@
 .services_wrapper #lower_right {
   top: 1150px;
 }
+*/
 /* 对于 cases_wrapper, 所有的top属性都要增加 1200= 550(index) + 650px(service_wrapper 的高度) */
+/*
 .cases_wrapper #left img{
   top: 1350px;
 }
@@ -40,15 +44,18 @@
 .cases_wrapper #view_button{
   top: 1741px;
 }
+*/
 /* 对于 about_us, 所有的top属性都要增加 1750 px =
   550(index) + 650px(service_wrapper ) + 550 (cases ) 的高度)
 */
+/*
 .about_us_wrapper #about_us_left {
   top: 1950px;
 }
 .about_us_wrapper #about_us_right{
   top: 1950px;
 }
+*/
 /*
 .cases_wrapper{
   display:none;
@@ -59,7 +66,7 @@
 */
   </style>
 </head>
-<body  >
+<body  style='width: 1280px; margin: 0 auto;'>
 <div id='right_menu'>
   <a href='#index_arch' id='index_link' onclick='restart_index_animation()'>●  关于我们</a> <br/>
   <a href='#services_arch' id='services_link' onclick='restart_services_animation()'>●  服务项目</a> <br/>
@@ -74,6 +81,9 @@
     <a href='#cases_arch'>案例展示</a>
     <a href='#about_us_arch'>联系我们</a>
   </div>
+  <div class="top_search">
+    	<span>案例</span><input type="text" class="top_search_text" /><input type="button" class="top_search_button" />
+    </div>
 </div>
 <div class='index_wrapper' style='position:relative'>
   <div class='title animation_element'>
@@ -83,8 +93,8 @@
   <div id='left' class="left animation_element" style='top:150px'>
     <img src='left.jpg'/>
   </div>
-  <div id="middle" class='middle animation_element' style='top:0px'>
-    <img src='middle.jpg'/>
+  <div id="middle" class='middle animation_element' style='top:0px; left:670px;'>
+    <p class="p_text">北京宸立方科技有限公司成立于2005年，是一家提供虚拟现实应用系统解决方案及服务、网站建设、云计算、网站周边等相关业务的供应商。</p>
   </div>
   <div id="right" class='right animation_element' style='top:230px' >
     <div id='right_text'>
@@ -98,30 +108,28 @@
 </div><!-- index wrapper  -->
 
 <div class='services_wrapper'>
-  <div class='title animation_element'>
+    <div class='title animation_element'>
     <a name='services_arch'></a>
     服务项目
   </div>
   <div id ='upper_left' class='animation_element'>
     <img src='new_images/services_upper_left_1.jpg'/>
-    <img src='new_images/services_upper_left_2.jpg'/>
-    <a href='workflow.html'>
-      <img src='new_images/services_upper_left_3.jpg' style='float: right'/>
-    </a>
+    <p class="p_text2">为客户提供专业化、品牌化的网站界面设计、网站策划、网站建设与研发等</p>
+    <a href="workflow.html"><img src='new_images/services_upper_left_3.jpg'/></a>
   </div>
   <div id ='upper_right' class='animation_element'>
     <img src='new_images/services_upper_right_1.jpg'/>
-    <img src='new_images/services_upper_right_2.jpg'/>
+    <p class="p_text3">为客户提供专业化、品牌化的网站界面设计、网站策划、网站建设与研发等</p>
   </div>
   <div id='upper_left_arrow' style='position: absolute;
-    left: 356px;
-    top: 772px;
+    left: 362px;
+    top: 209px;
     ' class='arrow animation_element'>
     <img src='new_images/services_upper_left_arrow.jpg'/>
   </div>
   <div id='upper_right_arrow' style = 'position: absolute;
-    left: 691px;
-    top: 772px;
+    left: 689px;
+    top: 212px;
     ' class='arrow animation_element'>
     <img src='new_images/services_upper_right_arrow.jpg'/>
   </div>
@@ -130,17 +138,17 @@
   </div>
   <div id='lower_arrows' style='position: absolute;
     left: 329px;
-    top: 1075px;
+    top: 505px;
     ' class='arrow animation_element'>
     <img src='new_images/services_lower_arrows.jpg'/>
   </div>
   <div id ='lower_left' class='animation_element'>
     <img src='new_images/services_lower_left_1.jpg'/>
-    <img src='new_images/services_lower_left_2.jpg'/>
+    <p class="p_text2">为客户提供专业化、品牌化的网站界面设计、网站策划、网站建设与研发等</p>
   </div>
   <div id ='lower_right' class='animation_element'>
     <img src='new_images/services_lower_right_1.jpg'/>
-    <img src='new_images/services_lower_right_2.jpg'/>
+    <p class="p_text3">为客户提供专业化、品牌化的网站界面设计、网站策划、网站建设与研发等</p>
   </div>
 </div><!-- services_wrapper -->
 
@@ -173,11 +181,11 @@
     <img src='new_images/cases_ball_4.jpg' id='ball_4'/>
   </div>
 
-  <a href='cases_list.html'><img src='new_images/cases_view_button.jpg' id='view_button' class='animation_element'
+  <a href='cases_list.html'><img src='new_images/cases_view_button.jpg' id='view_button' class='animation_element' style="top:670px"
     /></a>
 </div><!-- cases_wrapper -->
 
-<div class='about_us_wrapper' style='height: 400px'>
+<div class='about_us_wrapper' style='height: 700px; position:relative;'>
   <div class='title animation_element'>
     <a name='about_us_arch'></a>
     联系我们
@@ -187,14 +195,14 @@
         width: 550px; height: 300px
       '>
       <form style='margin: 10px 0 0 170px'>
-        <input type='text'/><br/>
-        <input type='text'/><br/>
-        <input type='text'/><br/>
-        <textarea name='textarea' style='height: 100px'></textarea>
+        <input type='text' value="名称"/><br/>
+        <input type='text' value="电话"/><br/>
+        <input type='text' value="邮箱"/><br/>
+        <textarea name='textarea' style='height: 100px'>您的要求</textarea>
       </form>
     </div>
     <input type='button' style='border: 0px; background-color: #F87710; color:white;
-      height: 42px; width: 70px; font-size: 16px;
+      height: 33px; width: 82px; font-size: 16px;
       margin-left: 174px;cursor: pointer
     ' value='提交'/>
   </div>
@@ -241,11 +249,15 @@ high_light_link_on_right_menu = function(element_name){
   })
   $('#' + element_name +'_link').css('color', '#F87710')
 }
+
+// 在页面加载完成之后，才运行这里的函数。 = onload.
 $(function(){
   // 为每个title都初始化 appear 动作
   $('.title').each(
     function(i,e ){ $(e).appear() }
   )
+
+
   // 为每个title都做对应的 事件监听。如果对应的标题出现，并且没有运行过动画，
   // 那么就运行～
   $(['index', 'services', 'cases', 'about_us']).each(function(i,e){
@@ -253,7 +265,9 @@ $(function(){
       if($(window).scrollTop() < 100){
         high_light_link_on_right_menu('index')
       }else{
-        high_light_link_on_right_menu(e)
+        if(is_element_in_upper_half_area_in_current_window($e)){
+          high_light_link_on_right_menu(e)
+        }
       }
       // 只有没有运行过
       if($('#'+ e +'_animation_is_shown').length < 1 &&
@@ -267,5 +281,7 @@ $(function(){
     start_index_animation()
     high_light_link_on_right_menu('index')
   }
+  hide_right_menu_if_in_ie_6();
 })
+
 </script>

@@ -6,16 +6,23 @@
   <script type="text/javascript" src="animation.js"></script>
   <script type="text/javascript" src="masonry.pkgd.js"></script>
   <script type="text/javascript" src="imagesloaded.pkgd.js"></script>
-  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  	.top_menu{ width:400px; left:400px;}
+	.top_search{ left:800px;}
+  </style>
 </head>
-<body style='position:relative;background-color: #f2f2f2;' class='cases_list'>
-  <div id="top" class='top animation_element'>
+<body style='position:relative;background-color: #f2f2f2; margin:0;' class='cases_list'>
+  <div id="top" class='top animation_element' style="width:1150px; margin:0 auto; background-color:#fff; border:1px solid #CCC; background-position: 30px center;">
     <div class='top_menu'>
       <a href='all.html'>首页</a>
       <a href='index.html'>关于我们</a>
       <a href='services.html'>服务项目</a>
       <a href='cases.html'>案例展示</a>
       <a href='about_us.html'>联系我们</a>
+    </div>
+    <div class="top_search">
+    	<span>案例</span><input type="text" class="top_search_text" /><input type="button" class="top_search_button" />
     </div>
   </div>
   <!--
@@ -25,7 +32,7 @@
   -->
   <div class='wrapper' style='min-height: 650px; width: 1150px; margin: 0 auto; '>
     <div class='filter' >
-      <div class='active'> 全部类型</div>
+      <div class='active first'> 全部类型</div>
       <div> 企业展示型</div>
       <div> 行业门户型</div>
       <div> 电子商务型</div>
@@ -33,119 +40,227 @@
     </div><!-- filter -->
     <div class='list'>
       <div class='single_case'>
-        <img src='new_images/case_logo_5.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
+      	<div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="case_details.html" class="imghover"><img src='new_images/case_logo_2.jpg' width="274"/></a>
         </div>
-        <div class='category'>
-          所属行业：家具设计
-        </div>
-      </div><!-- single_case -->
-      <div class='single_case'>
-        <img src='new_images/case_logo_1.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
-        </div>
-        <div class='category'>
-          所属行业：家具设计
-        </div>
-      </div><!-- single_case -->
-      <div class='single_case'>
-        <img src='new_images/case_logo_6.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
-        </div>
-        <div class='category'>
-          所属行业：家具设计
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
         </div>
       </div><!-- single_case -->
       <div class='single_case'>
-        <img src='new_images/case_logo_2.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="case_details.html" class="imghover"><img src='new_images/case_logo_5.jpg' width="274"/></a>
         </div>
-        <div class='category'>
-          所属行业：家具设计
-        </div>
-      </div><!-- single_case -->
-      <div class='single_case'>
-        <img src='new_images/case_logo_3.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
-        </div>
-        <div class='category'>
-          所属行业：家具设计
-        </div>
-      </div><!-- single_case -->
-      <div class='single_case'>
-        <img src='new_images/case_logo_4.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
-        </div>
-        <div class='category'>
-          所属行业：家具设计
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
         </div>
       </div><!-- single_case -->
       <div class='single_case'>
-        <img src='new_images/case_logo_1.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_1.jpg' width="274"/></a>
         </div>
-        <div class='category'>
-          所属行业：家具设计
-        </div>
-      </div><!-- single_case -->
-      <div class='single_case'>
-        <img src='new_images/case_logo_2.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
-        </div>
-        <div class='category'>
-          所属行业：家具设计
-        </div>
-      </div><!-- single_case -->
-      <div class='single_case'>
-        <img src='new_images/case_logo_4.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
-        </div>
-        <div class='category'>
-          所属行业：家具设计
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
         </div>
       </div><!-- single_case -->
       <div class='single_case'>
-        <img src='new_images/case_logo_3.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_5.jpg' width="274"/></a>
         </div>
-        <div class='category'>
-          所属行业：家具设计
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
         </div>
       </div><!-- single_case -->
       <div class='single_case'>
-        <img src='new_images/case_logo_5.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_2.jpg' width="274"/></a>
         </div>
-        <div class='category'>
-          所属行业：家具设计
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
         </div>
       </div><!-- single_case -->
       <div class='single_case'>
-        <img src='new_images/case_logo_6.jpg'/>
-        <div class='single_case_title'>
-          <a href='case_details.html'>麦迪阳光</a>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_5.jpg' width="274"/></a>
         </div>
-        <div class='category'>
-          所属行业：家具设计
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
+        </div>
+      </div><!-- single_case -->
+      <div class='single_case'>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_3.jpg' width="274"/></a>
+        </div>
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
+        </div>
+      </div><!-- single_case -->
+      <div class='single_case'>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_1.jpg' width="274"/></a>
+        </div>
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
+        </div>
+      </div><!-- single_case -->
+      <div class='single_case'>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_2.jpg' width="274"/></a>
+        </div>
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
+        </div>
+      </div><!-- single_case -->
+      <div class='single_case'>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_3.jpg' width="274"/></a>
+        </div>
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
+        </div>
+      </div><!-- single_case -->
+      <div class='single_case'>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_4.jpg' width="274"/></a>
+        </div>
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
+        </div>
+      </div><!-- single_case -->
+      <div class='single_case'>
+        <div class="list_top">
+            <div class="btn-content">
+                <a href="#">
+                收藏<span>(01)</span>
+                </a>
+            </div>
+            <a href="#" class="imghover"><img src='new_images/case_logo_5.jpg' width="274"/></a>
+        </div>
+        <div style=" width:270px; height:71px; background-color:#fff; border:1px solid #ddd;">
+            <div class='single_case_title'>
+              <a href='case_details.html'>麦迪阳光</a>
+            </div>
+            <div class='category'>
+              所属行业：家具设计
+            </div>
         </div>
       </div><!-- single_case -->
     </div><!-- list -->
   </div><!-- wrapper -->
 
 
-  <div class='footer'>
-    <div style='margin: 0 auto 0 auto'>
+  <div class='footer' style='margin: 30px auto 0; width:1248px;'>
+    <div>
       <div class='left_footer'>
         <span style='font-size: 25px'>We can help you, call us:
           <span class='phone'> 010-52863872</span>
@@ -172,4 +287,6 @@
     msnry.layout();
   });
   $('.single_case').animate({opacity: 1.0}, 500, function(){ })
+  
+  
 </script>

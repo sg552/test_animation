@@ -6,7 +6,7 @@
   <script type="text/javascript" src="animation.js"></script>
   <link rel="stylesheet" href="style.css"></link>
 </head>
-<body style='position:relative' >
+<body style='position:relative;width: 1280px; margin: 0 auto;' >
   <div id="top" class='top animation_element'>
     <div class='top_menu'>
       <a href='all.html'>首页</a>
@@ -15,12 +15,24 @@
       <a href='cases.html'>案例展示</a>
       <a href='about_us.html'>联系我们</a>
     </div>
+    <div class="top_search">
+    	<span>案例</span><input type="text" class="top_search_text" /><input type="button" class="top_search_button" />
+    </div>
   </div>
   <div class='title animation_element'>
     联系我们
   </div>
   <div id='about_us_left' class='animation_element'>
-    <img src='new_images/about_us_left.jpg' style='width: 550px; height: 300px'/>
+    <div style='background-image: url(new_images/about_us_left.jpg);
+        width: 550px; height: 300px
+      '>
+      <form style='margin: 10px 0 0 170px'>
+        <input type='text' value="名称"/><br/>
+        <input type='text' value="电话"/><br/>
+        <input type='text' value="邮箱"/><br/>
+        <textarea name='textarea' style='height: 100px'>您的要求</textarea>
+      </form>
+    </div>
     <input type='button' style='border: 0px; background-color: #F87710; color:white;
       height: 42px; width: 70px; font-size: 16px;
       margin-left: 174px;cursor: pointer
