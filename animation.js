@@ -39,9 +39,9 @@ cancel_index_animation = function(){
   if($('#index_animation_is_showing').length > 0) {
     return;
   }
-  $('.index_wrapper .middle').css({ opacity: 0 , left: "-=10", top: "-=100" })
-  $('.index_wrapper .left').css({ opacity: 0 , left: "-=500"})
-  $('.index_wrapper .right').css({ opacity: 0 , left: "+=600"})
+  $('.index_wrapper .middle').css({ opacity: 0 })
+  $('.index_wrapper .left').css({ opacity: 0})
+  $('.index_wrapper .right').css({ opacity: 0})
   $([1,2,3,4,5]).each(function(i, e){
     $('#text' + i).css({opacity: 0})
   })
@@ -56,8 +56,12 @@ start_about_us_animation = function(){
     return;
   }
   $('body').append('<div id="about_us_animation_is_showing"></div>')
-  $('#about_us_left').animate({ opacity: 1.0, left: '+=500' }, 1000, function(){
-    $('#about_us_right').animate({ opacity: 1.0, left: '-=300' }, 1000, function(){
+  $('#about_us_left')
+    .css('left', '-=500')
+    .animate({ opacity: 1.0, left: '+=500' }, 1000, function(){
+    $('#about_us_right')
+      .css('left', '+=300')
+      .animate({ opacity: 1.0, left: '-=300' }, 1000, function(){
       $('body').append('<div id="about_us_animation_is_shown"></div>')
       $("#about_us_animation_is_showing").remove()
     })
@@ -67,8 +71,8 @@ cancel_about_us_animation = function(){
   if($('#about_us_animation_is_showing').length > 0) {
     return;
   }
-  $('#about_us_left').css({ opacity: 0, left: '-=500' })
-  $('#about_us_right').css({ opacity: 0, left: '+=300' })
+  $('#about_us_left').css({ opacity: 0 })
+  $('#about_us_right').css({ opacity: 0 })
   $("#about_us_animation_is_shown").remove()
 }
 
@@ -79,12 +83,20 @@ start_services_animation = function(){
     return;
   }
   $('body').append('<div id="services_animation_is_showing"></div>')
-  $('#upper_left').animate({ opacity: 1.0, left: "+=400" }, 540, function(){
+  $('#upper_left')
+    .css('left', '-=400')
+    .animate({ opacity: 1.0, left: "+=400" }, 540, function(){
     $('#upper_left_arrow').animate({ opacity: 1.0})
-    $('#upper_right').animate({ opacity: 1.0, left: "-=500" }, 540, function(){
+    $('#upper_right')
+      .css('left', '+=500')
+      .animate({ opacity: 1.0, left: "-=500" }, 540, function(){
       $('#upper_right_arrow').animate({ opacity: 1.0})
-      $('#lower_left').animate({ opacity: 1.0, left: "+=420" }, 540, function(){
-        $('#lower_right').animate({ opacity: 1.0, left: "-=470" }, 540, function(){
+      $('#lower_left')
+        .css('left', '-=420')
+        .animate({ opacity: 1.0, left: "+=420" }, 540, function(){
+        $('#lower_right')
+          .css('left', '+=470')
+          .animate({ opacity: 1.0, left: "-=470" }, 540, function(){
           $('#lower_arrows').animate({ opacity: 1.0}, 540, function(){
             $('body').append('<div id="services_animation_is_shown"></div>')
             $("#services_animation_is_showing").remove()

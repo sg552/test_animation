@@ -62,7 +62,7 @@ body{ font-family:"微软雅黑";}
 
 #about_us_left {
   position: absolute;
-  left: -400px; top: 200px;
+  left: 100px; top: 200px;
 }
 
 #about_us_left form input , #about_us_left form textarea{
@@ -73,7 +73,7 @@ body{ font-family:"微软雅黑";}
 #about_us_right{
   width: 425px; height: 200px;
   position: absolute;
-  left: 1000px; top: 200px;
+  left: 700px; top: 200px;
   color: rgb(124, 124, 124);
   font-size: 12px;
   line-height: 30px;
@@ -132,23 +132,23 @@ body{ font-family:"微软雅黑";}
 #upper_left {
   width: 325px; height: 200px;
   position: absolute;
-  left: -400px; top: 140px;
+  left: 0px; top: 140px;
 }
 #upper_right {
   width: 325px; height: 200px;
   position: absolute;
-  left: 1360px; top: 140px;
+  left: 860px; top: 140px;
 }
 .services_wrapper .middle { position: absolute; left: 500px; top: 300px; }
 #lower_left {
   width: 325px; height: 200px;
   position: absolute;
-  left: -400px; top: 600px;
+  left: 20px; top: 600px;
 }
 #lower_right {
   width: 325px; height: 200px;
   position: absolute;
-  left: 1360px; top: 600px;
+  left: 890px; top: 600px;
 }
 .arrow{
   z-index: 10;
