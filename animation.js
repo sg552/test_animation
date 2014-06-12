@@ -10,9 +10,16 @@ start_index_animation = function(){
     return;
   }
   $('body').append('<div id="index_animation_is_showing"></div>')
-  $('.index_wrapper .middle').animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)
-  $('.index_wrapper .left').animate({ opacity: 1.0 , left: "+=500"}, 2000)
-  $('.index_wrapper .right').animate({ opacity: 1.0 , left: "-=600"}, 2000, function(){
+  $('.index_wrapper .middle')
+    .css('left', '-=10')
+    .css('top', '-=100')
+    .animate({ opacity: 1.0 , left: "+=10", top: "+=100" }, 1000)
+  $('.index_wrapper .left')
+    .css('left', '-=500')
+    .animate({ opacity: 1.0 , left: "+=500"}, 2000)
+  $('.index_wrapper .right')
+    .css('left', '+=600')
+    .animate({ opacity: 1.0 , left: "-=600"}, 2000, function(){
     $('#text1').animate({opacity: 1.0}, 500, function(){
       $('#text2').animate({opacity: 1.0}, 500, function(){
         $('#text3').animate({opacity: 1.0}, 500, function(){
