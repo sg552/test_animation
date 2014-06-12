@@ -100,8 +100,8 @@ body{ font-family:"微软雅黑";}
 
 #balls img{
   float: left;
-  margin-left: 200px;
-  opacity: 0
+  margin-left: 0px;
+  opacity: 0;
 }
 
 #text{

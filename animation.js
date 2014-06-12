@@ -112,12 +112,12 @@ cancel_services_animation = function(){
     return;
   }
   $("#services_animation_is_shown").remove()
-  $('#upper_left').css({ opacity: 0, left: "-=400" })
+  $('#upper_left').css({ opacity: 0})
   $('#upper_left_arrow').css({ opacity: 0})
-  $('#upper_right').css({ opacity: 0, left: "+=500" })
+  $('#upper_right').css({ opacity: 0 })
   $('#upper_right_arrow').css({ opacity: 0})
-  $('#lower_left').css({ opacity: 0, left: "-=420" })
-  $('#lower_right').css({ opacity: 0, left: "+=470" })
+  $('#lower_left').css({ opacity: 0})
+  $('#lower_right').css({ opacity: 0 })
   $('#lower_arrows').css({ opacity: 0})
   $('.middle').css({ opacity: 0 })
 }
@@ -127,7 +127,8 @@ cancel_services_animation = function(){
 
 //案例展示的动画函数: 显示树
 show_trees = function(){
-  $('#tree1').animate({ opacity: 1.0, left: "+=550"}, 1000, function(){
+  $('#tree1')
+    .animate({ opacity: 1.0}, 1000, function(){
     $('#tree2').animate({ opacity: 1.0}, 1000, function(){
       $('#tree3').animate({ opacity: 1.0}, 1000, function(){
         $('#tree4').animate({ opacity: 1.0}, 1000, function(){
@@ -139,14 +140,30 @@ show_trees = function(){
 }
 //案例展示的动画函数: 显示4个小球
 show_balls = function(){
-  $('#ball_1').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-    $('#ball_plus_1').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-      $('#ball_2').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-        $('#ball_plus_2').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-          $('#ball_3').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-            $('#ball_plus_3').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-              $('#ball_4').animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
-                $('#view_button').animate({opacity: 1.0, top: '-=50'}, 1500)
+  $('#ball_1')
+    .css('margin-left', '+=200')
+    .animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
+    $('#ball_plus_1')
+      .css('margin-left', '+=200')
+      .animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
+      $('#ball_2')
+        .css('margin-left', '+=200')
+        .animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
+        $('#ball_plus_2')
+          .css('margin-left', '+=200')
+          .animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
+          $('#ball_3')
+            .css('margin-left', '+=200')
+            .animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
+            $('#ball_plus_3')
+              .css('margin-left', '+=200')
+              .animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
+              $('#ball_4')
+                .css('margin-left', '+=200')
+                .animate({ opacity: 1.0, 'margin-left': "-=200"}, 800, function(){
+                $('#view_button')
+                  .css('top', '+=50')
+                  .animate({opacity: 1.0, top: '-=50'}, 1500)
                 $('#balls').animate({ width: 700}, 100, function(){
                   $('body').append('<div id="cases_animation_is_shown"></div>')
                   $("#cases_animation_is_showing").remove()
