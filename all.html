@@ -1,4 +1,4 @@
-<!DOC​TYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -50,9 +50,8 @@
 </div><!-- index wrapper  -->
 
 <div class='services_wrapper'>
-    <div class='title animation_element'>
+  <div class='title animation_element'>
     <a name='services_arch'></a>
-    服务项目
   </div>
   <div id ='upper_left' class='animation_element'>
     <img src='new_images/services_upper_left_1.jpg'/>
@@ -181,6 +180,7 @@
 </body>
 </html>
 <script>
+// 判断是否有足够的高度来显示某个动画
 is_shown_enough_area_to_run_animation = function(element){
   min_shown_height = 100;
   return element.offset().top - $(window).scrollTop() < ($(window).height() - min_shown_height)
@@ -193,29 +193,33 @@ high_light_link_on_right_menu = function(element_name){
   $('#' + element_name +'_link').css('color', '#F87710')
 }
 
+// 为右侧菜单设置高亮
+high_light_link_on_right_menu_when_window_scroll = function(){
+  $(window).scroll(function(){
+    current_top = $(window).scrollTop();
+    if(current_top <= 360){
+      high_light_link_on_right_menu('index')
+    }else if(current_top > 360 && current_top <= 1325){
+      high_light_link_on_right_menu('services')
+    }else if(current_top > 1325 && current_top <= 2093){
+      high_light_link_on_right_menu('cases')
+    }else{
+      high_light_link_on_right_menu('about_us')
+    }
+  })
+}
+
 // 在页面加载完成之后，才运行这里的函数。 = onload.
 $(function(){
   // 为每个title都初始化 appear 动作
   $('.title').each(
     function(i,e ){ $(e).appear() }
   )
-
+  high_light_link_on_right_menu_when_window_scroll()
   // 为每个title都做对应的 事件监听。如果对应的标题出现，并且没有运行过动画，
   // 那么就运行～
   $(['index', 'services', 'cases', 'about_us']).each(function(i,e){
     $('.'+e+'_wrapper .title').on('appear', function(event, $e){
-      console.info('highlighting ' + e +', $e: ' + $e )
-      if($(window).scrollTop() < 100){
-        high_light_link_on_right_menu('index')
-      }else{
-        console.info('$e.offset(): ')
-        console.info($e.offset())
-        if(is_element_in_upper_half_area_in_current_window($e) && $('.' + e + '_wrapper .title').is(':appeared')
-        ){
-          console.info('highlighting ' + e + ',' + $(window).scrollTop())
-          high_light_link_on_right_menu(e)
-        }
-      }
       // 只有没有运行过
       if($('#'+ e +'_animation_is_shown').length < 1 &&
         is_shown_enough_area_to_run_animation($e)){
